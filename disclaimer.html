@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disclaimer — UPISecure</title>
+    <meta name="description" content="Read the UPISecure Disclaimer. Understand the limitations of the UPI Safety Handbook and how the information contained in it should be used.">
+    <meta name="keywords" content="UPI safety, disclaimer, legal notice, UPISecure, ebook disclaimer">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Disclaimer — UPISecure">
+    <meta property="og:description" content="Important limitations and legal notice regarding the UPI Safety Handbook by UPISecure.">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config (matches main site) -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            50: '#F0F3F9', 100: '#DDE3F1', 200: '#C0CDE6',
+                            300: '#94AAD4', 400: '#6482BD', 500: '#4361A1',
+                            600: '#324A83', 700: '#273867', 800: '#1B2545',
+                            900: '#131A30', 950: '#0B1220',
+                        },
+                        electric: {
+                            50: '#EFF6FF', 100: '#DBEAFE',
+                            500: '#2563EB', 600: '#1D4ED8', 700: '#1E40AF',
+                        },
+                        emerald: {
+                            50: '#ECFDF5', 500: '#10B981', 600: '#059669',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    animation: {
+                        'fadeInUp': 'fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style type="text/css">
+        h1, h2, h3, h4, h5, h6 { font-family: 'Outfit', sans-serif; }
+        body { font-family: 'Inter', sans-serif; }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .dark .glass {
+            background: rgba(11, 18, 32, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .light .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(15, 23, 42, 0.06);
+            box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.05);
+        }
+
+        .security-grid {
+            background-size: 40px 40px;
+            background-image:
+                linear-gradient(to right, rgba(37, 99, 235, 0.03) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(37, 99, 235, 0.03) 1px, transparent 1px);
+        }
+        .dark .security-grid {
+            background-image:
+                linear-gradient(to right, rgba(37, 99, 235, 0.04) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(37, 99, 235, 0.04) 1px, transparent 1px);
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0B1220; }
+        .light ::-webkit-scrollbar-track { background: #F8FAFC; }
+        ::-webkit-scrollbar-thumb { background: #1E293B; border-radius: 4px; }
+        .light ::-webkit-scrollbar-thumb { background: #CBD5E1; }
+        ::-webkit-scrollbar-thumb:hover { background: #2563EB; }
+
+        .toc-sidebar {
+            position: sticky;
+            top: 96px;
+            max-height: calc(100vh - 120px);
+            overflow-y: auto;
+        }
+
+        .policy-section { scroll-margin-top: 96px; }
+
+        .toc-link {
+            transition: all 0.2s ease;
+            border-left: 2px solid transparent;
+        }
+        .toc-link:hover, .toc-link.active {
+            border-left-color: #2563EB;
+            color: #2563EB;
+        }
+
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .gradient-divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(37, 99, 235, 0.3), transparent);
+        }
+
+        /* Warning stripe for important notices */
+        .warning-stripe {
+            background: repeating-linear-gradient(
+                -45deg,
+                rgba(245, 158, 11, 0.04),
+                rgba(245, 158, 11, 0.04) 10px,
+                transparent 10px,
+                transparent 20px
+            );
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-navy-950 dark:text-slate-100 transition-colors duration-300 security-grid">
+
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 w-full z-40 transition-all duration-300 glass border-b border-white/5 py-4">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <div class="bg-electric-500 text-white p-2 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:bg-electric-600 shadow-lg shadow-electric-500/20">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                </div>
+                <span class="font-heading font-bold text-xl tracking-tight dark:text-white text-navy-950">UPI<span class="text-electric-500">Secure</span></span>
+            </a>
+
+            <!-- Back + Theme Toggle -->
+            <div class="flex items-center space-x-4">
+                <a href="index.html" class="hidden sm:inline-flex items-center space-x-2 text-sm text-slate-500 dark:text-slate-400 hover:text-electric-500 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                    </svg>
+                    <span>Back to Home</span>
+                </a>
+
+                <button id="theme-toggle" aria-label="Toggle dark mode" class="p-2.5 rounded-lg border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors text-slate-600 dark:text-slate-400">
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464a1 1 0 10-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Banner -->
+    <section class="relative pt-32 pb-16 overflow-hidden">
+        <!-- Ambient gradients -->
+        <div class="absolute top-0 right-1/3 w-96 h-96 bg-amber-500/6 rounded-full blur-[130px] pointer-events-none animate-pulse-slow"></div>
+        <div class="absolute bottom-0 left-1/4 w-72 h-72 bg-electric-500/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+            <!-- Badge -->
+            <div class="inline-flex items-center space-x-2 bg-amber-500/10 text-amber-500 dark:text-amber-400 px-3 py-1 rounded-full text-xs font-semibold border border-amber-500/20 mb-6 animate-fadeInUp">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+                <span>Legal &amp; Transparency</span>
+            </div>
+
+            <!-- Headline -->
+            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight dark:text-white text-navy-950 font-heading tracking-tight mb-4 animate-fadeInUp" style="animation-delay:0.1s;">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-orange-500">Disclaimer</span>
+            </h1>
+            <p class="text-slate-500 dark:text-slate-400 text-sm font-light max-w-xl mx-auto animate-fadeInUp" style="animation-delay:0.2s;">
+                Last updated: <span class="text-slate-300 font-medium">June 17, 2026</span>
+            </p>
+
+            <!-- Gradient divider -->
+            <div class="gradient-divider mt-10 max-w-2xl mx-auto"></div>
+        </div>
+    </section>
+
+    <!-- Main Content: Sidebar TOC + Policy Body -->
+    <main class="max-w-7xl mx-auto px-6 pb-24 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+            <!-- ── Left: Table of Contents Sidebar ── -->
+            <aside class="lg:col-span-3 hidden lg:block">
+                <div class="toc-sidebar">
+                    <div class="glass rounded-2xl p-6 border border-white/5">
+                        <h2 class="font-heading font-semibold text-xs uppercase tracking-widest text-slate-400 mb-4">Table of Contents</h2>
+                        <nav class="space-y-1" id="toc-nav">
+                            <a href="#general" class="toc-link flex items-center pl-3 py-2 text-xs text-slate-400 hover:text-electric-500 rounded-r-lg">
+                                <span class="w-5 flex-shrink-0 text-amber-500 mr-2 text-[10px] font-bold">01</span>General Disclaimer
+                            </a>
+                            <a href="#not-professional-advice" class="toc-link flex items-center pl-3 py-2 text-xs text-slate-400 hover:text-electric-500 rounded-r-lg">
+                                <span class="w-5 flex-shrink-0 text-amber-500 mr-2 text-[10px] font-bold">02</span>Not Professional Advice
+                            </a>
+                            <a href="#accuracy" class="toc-link flex items-center pl-3 py-2 text-xs text-slate-400 hover:text-electric-500 rounded-r-lg">
+                                <span class="w-5 flex-shrink-0 text-amber-500 mr-2 text-[10px] font-bold">03</span>Accuracy of Information
+                            </a>
+                            <a href="#no-guarantee" class="toc-link flex items-center pl-3 py-2 text-xs text-slate-400 hover:text-electric-500 rounded-r-lg">
+                                <span class="w-5 flex-shrink-0 text-amber-500 mr-2 text-[10px] font-bold">04</span>No Guarantee of Results
+                            </a>
+                            <a href="#third-party" class="toc-link flex items-center pl-3 py-2 text-xs text-slate-400 hover:text-electric-500 rounded-r-lg">
+                                <span class="w-5 flex-shrink-0 text-amber-500 mr-2 text-[10px] font-bold">05</span>Third-Party References
+                            </a>
+                            <a href="#affiliate" class="toc-link flex items-center pl-3 py-2 text-xs text-slate-400 hover:text-electric-500 rounded-r-lg">
+                                <span class="w-5 flex-shrink-0 text-amber-500 mr-2 text-[10px] font-bold">06</span>Affiliate Disclosure
+                            </a>
+                            <a href="#testimonials" class="toc-link flex items-center pl-3 py-2 text-xs text-slate-400 hover:text-electric-500 rounded-r-lg">
+                                <span class="w-5 flex-shrink-0 text-amber-500 mr-2 text-[10px] font-bold">07</span>Testimonials
+                            </a>
+                            <a href="#liability" class="toc-link flex items-center pl-3 py-2 text-xs text-slate-400 hover:text-electric-500 rounded-r-lg">
+                                <span class="w-5 flex-shrink-0 text-amber-500 mr-2 text-[10px] font-bold">08</span>Limitation of Liability
+                            </a>
+                            <a href="#errors" class="toc-link flex items-center pl-3 py-2 text-xs text-slate-400 hover:text-electric-500 rounded-r-lg">
+                                <span class="w-5 flex-shrink-0 text-amber-500 mr-2 text-[10px] font-bold">09</span>Errors &amp; Omissions
+                            </a>
+                            <a href="#governing-law" class="toc-link flex items-center pl-3 py-2 text-xs text-slate-400 hover:text-electric-500 rounded-r-lg">
+                                <span class="w-5 flex-shrink-0 text-amber-500 mr-2 text-[10px] font-bold">10</span>Governing Law
+                            </a>
+                            <a href="#contact" class="toc-link flex items-center pl-3 py-2 text-xs text-slate-400 hover:text-electric-500 rounded-r-lg">
+                                <span class="w-5 flex-shrink-0 text-amber-500 mr-2 text-[10px] font-bold">11</span>Contact Us
+                            </a>
+                        </nav>
+
+                        <div class="mt-6 pt-5 border-t border-white/5">
+                            <p class="text-[10px] text-slate-500 leading-relaxed">Have a legal question?</p>
+                            <a href="mailto:support@upisecure.com" class="text-xs text-electric-500 hover:text-electric-400 font-medium transition-colors">support@upisecure.com</a>
+                        </div>
+                    </div>
+
+                    <!-- Legal links -->
+                    <div class="glass rounded-2xl p-5 border border-white/5 mt-4">
+                        <h3 class="font-heading font-semibold text-xs uppercase tracking-widest text-slate-400 mb-3">Legal Pages</h3>
+                        <ul class="space-y-2 text-xs">
+                            <li>
+                                <a href="privacy-policy.html" class="flex items-center space-x-2 text-slate-400 hover:text-electric-500 transition-colors">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                                    <span>Privacy Policy</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="flex items-center space-x-2 text-slate-400 hover:text-electric-500 transition-colors">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
+                                    <span>Terms of Service</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="disclaimer.html" class="flex items-center space-x-2 text-amber-500 font-medium">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+                                    <span>Disclaimer (Current)</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- ── Right: Disclaimer Content ── -->
+            <article class="lg:col-span-9 space-y-10 pt-2">
+
+                <!-- Critical notice banner -->
+                <div class="glass rounded-2xl p-6 border border-amber-500/30 bg-amber-500/5 warning-stripe">
+                    <div class="flex items-start space-x-4">
+                        <div class="flex-shrink-0 w-10 h-10 rounded-xl bg-amber-500/15 border border-amber-500/20 flex items-center justify-center text-amber-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h2 class="font-heading font-bold text-sm text-amber-400 mb-1">Important Notice</h2>
+                            <p class="text-sm text-amber-200/70 leading-relaxed font-light">
+                                Please read this disclaimer carefully before purchasing or using the <strong class="text-amber-300">UPI Safety Handbook</strong>. By accessing or purchasing this product, you agree that you have read, understood, and accepted all the terms set out below.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 01: General Disclaimer -->
+                <section id="general" class="policy-section space-y-4">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="section-badge bg-amber-500/10 text-amber-500 border border-amber-500/20">01 — General</span>
+                    </div>
+                    <h2 class="text-2xl font-bold dark:text-white text-navy-950 font-heading">General Disclaimer</h2>
+                    <div class="gradient-divider"></div>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                        The <em>UPI Safety Handbook</em> ("the Handbook") is a digital educational resource published and sold by <strong class="text-slate-300">UPISecure</strong>. All content within this Handbook — including but not limited to articles, guides, checklists, case studies, examples, and tips — is provided strictly for <strong class="text-slate-300">general educational and informational purposes only</strong>.
+                    </p>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                        UPISecure makes no representation that the information provided is appropriate or available for use in all geographic locations. Access to the Handbook from territories where its content may be illegal is prohibited. Those who choose to access the Handbook from such territories do so on their own initiative and are responsible for compliance with local laws.
+                    </p>
+                </section>
+
+                <!-- Section 02: Not Professional Advice -->
+                <section id="not-professional-advice" class="policy-section space-y-4">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="section-badge bg-red-500/10 text-red-400 border border-red-500/20">02 — Not Advice</span>
+                    </div>
+                    <h2 class="text-2xl font-bold dark:text-white text-navy-950 font-heading">Not Professional Advice</h2>
+                    <div class="gradient-divider"></div>
+
+                    <div class="glass rounded-xl p-5 border border-red-500/20 bg-red-500/5 flex items-start space-x-3 mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-red-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <p class="text-sm text-red-300 font-medium leading-relaxed">
+                            The content of this Handbook does <strong>not</strong> constitute legal, financial, banking, cybersecurity, or professional advice of any kind.
+                        </p>
+                    </div>
+
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                        The Handbook is written by non-lawyers and does not establish any attorney-client, advisor-client, or professional relationship between UPISecure and the reader. It should not be treated as a substitute for professional guidance from a licensed legal expert, certified cybersecurity professional, or registered financial advisor.
+                    </p>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                        If you believe you have been a victim of financial fraud, identity theft, or a UPI scam, you should <strong class="text-slate-300">immediately</strong> contact your bank, the National Cybercrime Reporting Portal (<a href="https://cybercrime.gov.in" target="_blank" rel="noopener" class="text-electric-500 hover:underline">cybercrime.gov.in</a>), or call the official helpline <span class="text-emerald-500 font-bold">1930</span>. Do not rely solely on this Handbook for time-sensitive decisions.
+                    </p>
+                </section>
+
+                <!-- Section 03: Accuracy of Information -->
+                <section id="accuracy" class="policy-section space-y-4">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="section-badge bg-electric-500/10 text-electric-500 border border-electric-500/20">03 — Accuracy</span>
+                    </div>
+                    <h2 class="text-2xl font-bold dark:text-white text-navy-950 font-heading">Accuracy of Information</h2>
+                    <div class="gradient-divider"></div>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                        UPISecure makes every reasonable effort to ensure the information in the Handbook is accurate and up-to-date at the time of publication. However, the digital payments landscape — including UPI regulations, scam techniques, NPCI guidelines, and banking policies — evolves rapidly.
+                    </p>
+
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div class="glass rounded-xl p-4 border border-white/5 space-y-2 text-center">
+                            <div class="text-2xl">📅</div>
+                            <h4 class="font-heading font-semibold text-xs dark:text-white text-navy-950">Time-Sensitive</h4>
+                            <p class="text-[10px] text-slate-500 font-light">Scam tactics and RBI guidelines change frequently. Always verify current rules.</p>
+                        </div>
+                        <div class="glass rounded-xl p-4 border border-white/5 space-y-2 text-center">
+                            <div class="text-2xl">🔍</div>
+                            <h4 class="font-heading font-semibold text-xs dark:text-white text-navy-950">Cross-Reference</h4>
+                            <p class="text-[10px] text-slate-500 font-light">Always cross-reference with official RBI, NPCI, or government sources.</p>
+                        </div>
+                        <div class="glass rounded-xl p-4 border border-white/5 space-y-2 text-center">
+                            <div class="text-2xl">🔄</div>
+                            <h4 class="font-heading font-semibold text-xs dark:text-white text-navy-950">Updated Editions</h4>
+                            <p class="text-[10px] text-slate-500 font-light">We issue updates to the Handbook when material information changes.</p>
+                        </div>
+                    </div>
+
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                        UPISecure does not warrant that all information is complete, accurate, or current. We expressly disclaim all liability for any errors, inaccuracies, or omissions in the content, and for any damages resulting from reliance on such information.
+                    </p>
+                </section>
+
+                <!-- Section 04: No Guarantee of Results -->
+                <section id="no-guarantee" class="policy-section space-y-4">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="section-badge bg-amber-500/10 text-amber-500 border border-amber-500/20">04 — Results</span>
+                    </div>
+                    <h2 class="text-2xl font-bold dark:text-white text-navy-950 font-heading">No Guarantee of Results</h2>
+                    <div class="gradient-divider"></div>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                        While the Handbook is designed to meaningfully improve your awareness of and resilience against UPI scams, <strong class="text-slate-300">UPISecure makes no guarantee</strong> that following its advice will completely prevent you from falling victim to fraud.
+                    </p>
+
+                    <!-- Stats-style callout row -->
+                    <div class="glass rounded-xl p-5 border border-white/5 space-y-3">
+                        <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Why no guarantee?</p>
+                        <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400 font-light">
+                            <li class="flex items-start space-x-3">
+                                <span class="text-amber-500 flex-shrink-0 mt-0.5 font-bold">·</span>
+                                <span>Scam tactics evolve in real-time and may outpace the guidance in this edition of the Handbook.</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-amber-500 flex-shrink-0 mt-0.5 font-bold">·</span>
+                                <span>Individual circumstances, app versions, device settings, and network conditions vary widely.</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-amber-500 flex-shrink-0 mt-0.5 font-bold">·</span>
+                                <span>Outcomes depend entirely on the reader's understanding and application of the guidance provided.</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <span class="text-amber-500 flex-shrink-0 mt-0.5 font-bold">·</span>
+                                <span>Determined and sophisticated bad actors may bypass even the most diligent safety measures.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                        The Handbook is a tool to help you make more informed decisions — not a security product or technical safeguard. Think of it as an educational supplement to, not a replacement for, vigilance and professional security tools.
+                    </p>
+                </section>
+
+                <!-- Section 05: Third-Party References -->
+                <section id="third-party" class="policy-section space-y-4">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="section-badge bg-slate-500/20 text-slate-400 border border-slate-500/20">05 — References</span>
+                    </div>
+                    <h2 class="text-2xl font-bold dark:text-white text-navy-950 font-heading">Third-Party References</h2>
+                    <div class="gradient-divider"></div>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                        The Handbook may reference third-party brands, apps, services, government portals, or organizations (such as NPCI, RBI, Google Pay, PhonePe, Paytm, etc.). These references are included solely to illustrate real-world scenarios and educational context. They do not imply:
+                    </p>
+                    <ul class="space-y-2 text-sm text-slate-600 dark:text-slate-400 font-light">
+                        <li class="flex items-start space-x-3">
+                            <span class="text-slate-500 flex-shrink-0 mt-0.5 font-bold">·</span>
+                            <span>Any endorsement, partnership, or affiliation between UPISecure and those brands.</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-slate-500 flex-shrink-0 mt-0.5 font-bold">·</span>
+                            <span>Any endorsement of UPISecure's content by those third parties.</span>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="text-slate-500 flex-shrink-0 mt-0.5 font-bold">·</span>
+                            <span>That UPISecure has reviewed or approves any content on third-party websites linked or mentioned.</span>
+                        </li>
+                    </ul>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                        All trademarks, logos, and brand names are the property of their respective owners.
+                    </p>
+                </section>
+
+                <!-- Section 06: Affiliate Disclosure -->
+                <section id="affiliate" class="policy-section space-y-4">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="section-badge bg-emerald-500/10 text-emerald-500 border border-emerald-500/20">06 — Affiliate</span>
+                    </div>
+                    <h2 class="text-2xl font-bold dark:text-white text-navy-950 font-heading">Affiliate Disclosure</h2>
+                    <div class="gradient-divider"></div>
+
+                    <div class="glass rounded-xl p-5 border border-emerald-500/20 bg-emerald-500/5 flex items-start space-x-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-emerald-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                        </svg>
+                        <p class="text-sm text-emerald-300 font-medium leading-relaxed">
+                            The UPI Safety Handbook currently contains <strong>no affiliate links</strong>. We do not earn commissions from recommending any tools, apps, or services.
+                        </p>
+                    </div>
+
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                        In the future, UPISecure may feature affiliate relationships or sponsored content on its website. If and when such relationships exist, they will be clearly disclosed in accordance with applicable advertising standards and regulations. Our editorial content and recommendations will always remain independent and unbiased.
+                    </p>
+                </section>
+
+                <!-- Section 07: Testimonials -->
+                <section id="testimonials" class="policy-section space-y-4">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="section-badge bg-purple-500/10 text-purple-400 border border-purple-500/20">07 — Testimonials</span>
+                    </div>
+                    <h2 class="text-2xl font-bold dark:text-white text-navy-950 font-heading">Testimonials</h2>
+                    <div class="gradient-divider"></div>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                        Testimonials and reviews displayed on this website reflect the personal experience and opinions of individual readers. They are provided voluntarily and have not been fabricated.
+                    </p>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                        However, individual results are subjective and may vary. The experiences shared in testimonials are not a guarantee that all readers will achieve the same level of awareness, protection, or satisfaction. Testimonials should not be interpreted as a promise or prediction of your specific outcome.
+                    </p>
+                    <div class="glass rounded-xl p-4 border border-white/5 text-xs text-slate-500 font-light leading-relaxed italic">
+                        "Customer testimonials on this website represent individual experiences only and do not constitute a guarantee of results. Your experience may differ."
+                    </div>
+                </section>
+
+                <!-- Section 08: Limitation of Liability -->
+                <section id="liability" class="policy-section space-y-4">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="section-badge bg-red-500/10 text-red-400 border border-red-500/20">08 — Liability</span>
+                    </div>
+                    <h2 class="text-2xl font-bold dark:text-white text-navy-950 font-heading">Limitation of Liability</h2>
+                    <div class="gradient-divider"></div>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                        To the fullest extent permitted by applicable law, UPISecure, its authors, editors, contributors, and affiliates shall not be liable for:
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-start space-x-3 glass rounded-xl p-4 border border-white/5">
+                            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-red-500/10 flex items-center justify-center text-red-400 text-xs font-bold">✕</span>
+                            <div>
+                                <h4 class="font-heading font-semibold text-sm dark:text-white text-navy-950 mb-0.5">Financial Loss</h4>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 font-light">Any direct, indirect, or consequential financial losses resulting from UPI fraud, even where such fraud could theoretically have been avoided using guidance from this Handbook.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3 glass rounded-xl p-4 border border-white/5">
+                            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-red-500/10 flex items-center justify-center text-red-400 text-xs font-bold">✕</span>
+                            <div>
+                                <h4 class="font-heading font-semibold text-sm dark:text-white text-navy-950 mb-0.5">Technical Failures</h4>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 font-light">Issues arising from the use or inability to use the Handbook or this website, including download failures, corruption, or device incompatibility.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3 glass rounded-xl p-4 border border-white/5">
+                            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-red-500/10 flex items-center justify-center text-red-400 text-xs font-bold">✕</span>
+                            <div>
+                                <h4 class="font-heading font-semibold text-sm dark:text-white text-navy-950 mb-0.5">Decisions Based on Content</h4>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 font-light">Any loss or damage arising from decisions made in reliance on the information provided in the Handbook without seeking independent professional advice where appropriate.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3 glass rounded-xl p-4 border border-white/5">
+                            <span class="flex-shrink-0 w-6 h-6 rounded-full bg-red-500/10 flex items-center justify-center text-red-400 text-xs font-bold">✕</span>
+                            <div>
+                                <h4 class="font-heading font-semibold text-sm dark:text-white text-navy-950 mb-0.5">Third-Party Content</h4>
+                                <p class="text-xs text-slate-500 dark:text-slate-400 font-light">Content, accuracy, or conduct of any third-party websites, portals, or services referenced in the Handbook.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                        In any case, UPISecure's total liability to you shall not exceed the amount you paid for the Handbook.
+                    </p>
+                </section>
+
+                <!-- Section 09: Errors & Omissions -->
+                <section id="errors" class="policy-section space-y-4">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="section-badge bg-amber-500/10 text-amber-500 border border-amber-500/20">09 — Errors</span>
+                    </div>
+                    <h2 class="text-2xl font-bold dark:text-white text-navy-950 font-heading">Errors &amp; Omissions</h2>
+                    <div class="gradient-divider"></div>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                        Despite our best efforts, the Handbook and this website may occasionally contain typographical errors, inaccurate descriptions, outdated statistics, or technical inaccuracies. UPISecure reserves the right to correct any errors, inaccuracies, or omissions and to change or update information at any time without prior notice.
+                    </p>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                        If you notice a factual error in the Handbook, please report it to <a href="mailto:support@upisecure.com" class="text-electric-500 hover:underline">support@upisecure.com</a>. We appreciate corrections and will investigate and address them in future editions.
+                    </p>
+                </section>
+
+                <!-- Section 10: Governing Law -->
+                <section id="governing-law" class="policy-section space-y-4">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="section-badge bg-electric-500/10 text-electric-500 border border-electric-500/20">10 — Legal</span>
+                    </div>
+                    <h2 class="text-2xl font-bold dark:text-white text-navy-950 font-heading">Governing Law</h2>
+                    <div class="gradient-divider"></div>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                        This Disclaimer and any dispute arising from or relating to it or the Handbook shall be governed by and construed in accordance with the laws of <strong class="text-slate-300">India</strong>, without regard to its conflict of law principles.
+                    </p>
+                    <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                        Any legal proceedings arising out of or in connection with this Disclaimer shall be brought exclusively in the appropriate courts of jurisdiction within India. By using our website or purchasing the Handbook, you irrevocably consent to the jurisdiction of such courts.
+                    </p>
+
+                    <div class="glass rounded-xl p-4 border border-white/5 flex items-center space-x-3">
+                        <span class="text-2xl">🇮🇳</span>
+                        <div>
+                            <p class="text-xs font-bold text-slate-300">Jurisdiction: Republic of India</p>
+                            <p class="text-[10px] text-slate-500 font-light">Applicable law includes Information Technology Act, 2000 and Consumer Protection Act, 2019 (where applicable).</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section 11: Contact Us -->
+                <section id="contact" class="policy-section">
+                    <div class="flex items-center space-x-3 mb-4">
+                        <span class="section-badge bg-emerald-500/10 text-emerald-500 border border-emerald-500/20">11 — Contact</span>
+                    </div>
+                    <h2 class="text-2xl font-bold dark:text-white text-navy-950 font-heading mb-4">Contact Us</h2>
+                    <div class="gradient-divider mb-6"></div>
+
+                    <div class="glass rounded-2xl p-8 border border-white/5 relative overflow-hidden">
+                        <div class="absolute -top-16 -right-16 w-40 h-40 bg-amber-500/5 rounded-full blur-3xl pointer-events-none"></div>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 font-light leading-relaxed mb-6">
+                            If you have any questions, concerns, or feedback about this Disclaimer or any content in the UPI Safety Handbook, please reach out to us directly:
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="space-y-1">
+                                <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Email</p>
+                                <a href="mailto:support@upisecure.com" class="text-electric-500 hover:text-electric-400 font-medium transition-colors text-sm">support@upisecure.com</a>
+                            </div>
+                            <div class="space-y-1">
+                                <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Cybercrime Helpline (India)</p>
+                                <span class="text-emerald-500 font-bold text-sm">1930</span>
+                            </div>
+                            <div class="space-y-1">
+                                <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Response Time</p>
+                                <span class="text-slate-300 text-sm font-light">Within 48 business hours</span>
+                            </div>
+                            <div class="space-y-1">
+                                <p class="text-xs font-bold uppercase tracking-widest text-slate-500">Effective Since</p>
+                                <span class="text-slate-300 text-sm font-light">June 17, 2026</span>
+                            </div>
+                        </div>
+
+                        <!-- Related legal pages -->
+                        <div class="mt-6 pt-6 border-t border-white/5 flex flex-wrap gap-4 items-center">
+                            <a href="index.html" class="inline-flex items-center space-x-2 text-sm font-semibold text-electric-500 hover:text-electric-400 transition-colors group">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 transition-transform group-hover:-translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+                                </svg>
+                                <span>Return to Home</span>
+                            </a>
+                            <span class="text-slate-600 text-xs">·</span>
+                            <a href="privacy-policy.html" class="text-sm text-slate-400 hover:text-electric-500 transition-colors">Privacy Policy</a>
+                            <span class="text-slate-600 text-xs">·</span>
+                            <a href="#" class="text-sm text-slate-400 hover:text-electric-500 transition-colors">Terms of Service</a>
+                        </div>
+                    </div>
+                </section>
+
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative bg-slate-950 border-t border-white/5 py-12 text-slate-500 text-sm">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+
+            <div class="space-y-4">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <div class="bg-electric-500 text-white p-1.5 rounded flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <span class="font-heading font-bold text-lg dark:text-white text-navy-950">UPI<span class="text-electric-500">Secure</span></span>
+                </a>
+                <p class="text-xs text-slate-600 leading-relaxed font-light">
+                    Helping you navigate the digital transaction landscape safely.
+                </p>
+            </div>
+
+            <div class="space-y-3">
+                <h4 class="font-heading font-semibold text-slate-300 text-xs tracking-wider uppercase">Product</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="index.html#why-matters" class="hover:text-white transition-colors">Why It Matters</a></li>
+                    <li><a href="index.html#what-learn" class="hover:text-white transition-colors">What You'll Learn</a></li>
+                    <li><a href="index.html#showcase" class="hover:text-white transition-colors">Chapter Previews</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-3">
+                <h4 class="font-heading font-semibold text-slate-300 text-xs tracking-wider uppercase">Legal</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                    <li><a href="disclaimer.html" class="text-amber-500 font-medium hover:text-amber-400 transition-colors">Disclaimer</a></li>
+                </ul>
+            </div>
+
+            <div class="space-y-3">
+                <h4 class="font-heading font-semibold text-slate-300 text-xs tracking-wider uppercase">Contact</h4>
+                <p class="text-xs text-slate-600 leading-relaxed font-light">
+                    Support: <span class="text-slate-400 font-medium">support@upisecure.com</span>
+                </p>
+                <p class="text-xs text-slate-600 leading-relaxed font-light">
+                    Official Cybercrime Helpline: <span class="text-emerald-500 font-semibold">1930</span>
+                </p>
+            </div>
+
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 border-t border-white/5 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-600">
+            <span>© 2026 UPISecure. All rights reserved.</span>
+            <span>Made with digital trust.</span>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // --- DARK / LIGHT MODE ---
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        function updateThemeIcons() {
+            if (document.documentElement.classList.contains('dark')) {
+                themeToggleLightIcon.classList.remove('hidden');
+                themeToggleDarkIcon.classList.add('hidden');
+            } else {
+                themeToggleDarkIcon.classList.remove('hidden');
+                themeToggleLightIcon.classList.add('hidden');
+            }
+        }
+
+        if (localStorage.getItem('color-theme') === 'dark' ||
+            (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            document.documentElement.classList.remove('light');
+        } else {
+            document.documentElement.classList.add('light');
+            document.documentElement.classList.remove('dark');
+        }
+        updateThemeIcons();
+
+        themeToggleBtn.addEventListener('click', () => {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                document.documentElement.classList.add('light');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                document.documentElement.classList.remove('light');
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+            updateThemeIcons();
+        });
+
+        // --- ACTIVE TOC HIGHLIGHTING ---
+        const sections = document.querySelectorAll('.policy-section');
+        const tocLinks = document.querySelectorAll('.toc-link');
+
+        function updateActiveToc() {
+            let current = '';
+            sections.forEach(section => {
+                if (window.scrollY >= section.offsetTop - 120) {
+                    current = section.getAttribute('id');
+                }
+            });
+            tocLinks.forEach(link => {
+                link.classList.remove('active', 'text-electric-500');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active', 'text-electric-500');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveToc);
+        updateActiveToc();
+    </script>
+</body>
+</html>

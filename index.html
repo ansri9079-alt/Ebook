@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Safety Handbook — Prevent Scams & Protect Your Money</title>
+    <meta name="description" content="One Wrong UPI Click Can Empty Your Account. Learn how to identify fake payment screens, QR traps, remote access fraud, and stay secure online with our premium handbook.">
+    <meta name="keywords" content="UPI safety, avoid UPI scams, digital payment security, scan fraud, phone fraud, protect bank account">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="UPI Safety Handbook — Learn How to Stay Safe">
+    <meta property="og:description" content="Practical protection strategies, scam awareness, and safe payment habits explained simply. Prevent UPI scams today.">
+    <meta property="og:image" content="upi_ebook_cover.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts: Google Fonts (Inter for body, Outfit for headlines) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS Play CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            50: '#F0F3F9',
+                            100: '#DDE3F1',
+                            200: '#C0CDE6',
+                            300: '#94AAD4',
+                            400: '#6482BD',
+                            500: '#4361A1',
+                            600: '#324A83',
+                            700: '#273867',
+                            800: '#1B2545',
+                            900: '#131A30',
+                            950: '#0B1220', // Base Deep Navy
+                        },
+                        electric: {
+                            50: '#EFF6FF',
+                            100: '#DBEAFE',
+                            500: '#2563EB', // Base Electric Blue
+                            600: '#1D4ED8',
+                            700: '#1E40AF',
+                        },
+                        emerald: {
+                            50: '#ECFDF5',
+                            500: '#10B981', // Success Green accents
+                            600: '#059669',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Outfit', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'fadeInUp': 'fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px) rotateX(10deg) rotateY(-15deg)' },
+                            '50%': { transform: 'translateY(-15px) rotateX(8deg) rotateY(-20deg)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS for 3D Book Mockup, Glassmorphism, and custom transitions -->
+    <style type="text/css">
+        /* Base typography setting */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Outfit', sans-serif;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Glassmorphism utility */
+        .glass {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .dark .glass {
+            background: rgba(11, 18, 32, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .light .glass {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(15, 23, 42, 0.06);
+            box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.05);
+        }
+
+        /* Subtle grid background pattern */
+        .security-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(37, 99, 235, 0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(37, 99, 235, 0.03) 1px, transparent 1px);
+        }
+        .dark .security-grid {
+            background-image: linear-gradient(to right, rgba(37, 99, 235, 0.04) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(37, 99, 235, 0.04) 1px, transparent 1px);
+        }
+
+        /* Premium 3D Book Layout */
+        .book-container {
+            perspective: 1200px;
+        }
+        .book {
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        /* Book parts */
+        .book-front {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: translateZ(12px);
+            transform-style: preserve-3d;
+            border-radius: 2px 8px 8px 2px;
+            box-shadow: inset 4px 0 10px rgba(0,0,0,0.15);
+        }
+        
+        .book-spine {
+            position: absolute;
+            top: 0;
+            left: -12px;
+            width: 24px;
+            height: 100%;
+            transform: rotateY(-90deg);
+            transform-style: preserve-3d;
+            background: #1e293b;
+            border-radius: 2px 0 0 2px;
+        }
+        
+        .book-pages {
+            position: absolute;
+            top: 4px;
+            left: 4px;
+            width: calc(100% - 6px);
+            height: calc(100% - 8px);
+            transform: translateZ(2px);
+            background: #f8fafc;
+            border-radius: 0 4px 4px 0;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1),
+                        3px 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        /* 3D Page Layers for realism */
+        .book-pages::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            width: 8px;
+            background: repeating-linear-gradient(to bottom, transparent, transparent 2px, rgba(0,0,0,0.05) 2px, rgba(0,0,0,0.05) 4px);
+        }
+
+        .book-back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            transform: rotateY(180deg) translateZ(12px);
+            background: #0B1220;
+            border-radius: 8px 2px 2px 8px;
+            box-shadow: -4px 0 10px rgba(0,0,0,0.15);
+        }
+
+        /* Default Rotation angles for visual pop */
+        .book-rotate-default {
+            transform: rotateX(10deg) rotateY(-15deg);
+        }
+        
+        .book-container:hover .book {
+            transform: rotateX(12deg) rotateY(-5deg) scale(1.03);
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B1220;
+        }
+        .light ::-webkit-scrollbar-track {
+            background: #F8FAFC;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1E293B;
+            border-radius: 4px;
+        }
+        .light ::-webkit-scrollbar-thumb {
+            background: #CBD5E1;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2563EB;
+        }
+
+        /* ── Full-Cover Book Display ── */
+        .cover-display-wrap {
+            perspective: 1200px;
+            padding: 20px 40px 50px 20px;
+        }
+        .cover-display {
+            position: relative;
+            display: inline-block;
+            transform: rotateX(5deg) rotateY(-18deg);
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            border-radius: 4px 8px 8px 4px;
+            box-shadow:
+                -8px 12px 0 rgba(0,0,0,0.25),
+                -16px 24px 0 rgba(0,0,0,0.15),
+                -30px 50px 80px rgba(0,0,0,0.55);
+        }
+        .cover-display-wrap:hover .cover-display {
+            transform: rotateX(3deg) rotateY(-6deg) scale(1.04);
+        }
+        .cover-display-img {
+            display: block;
+            width: 240px;
+            height: auto;
+            border-radius: 4px 8px 8px 4px;
+            object-fit: cover;
+        }
+        @media (min-width: 640px) {
+            .cover-display-img { width: 280px; }
+        }
+        .cover-display-gloss {
+            position: absolute;
+            inset: 0;
+            border-radius: 4px 8px 8px 4px;
+            pointer-events: none;
+            background: linear-gradient(
+                135deg,
+                rgba(255,255,255,0.14) 0%,
+                rgba(255,255,255,0.04) 30%,
+                transparent 60%,
+                rgba(0,0,0,0.12) 100%
+            );
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-navy-950 dark:text-slate-100 transition-colors duration-300 security-grid">
+
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 w-full z-40 transition-all duration-300 glass border-b border-white/5 py-4">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="bg-electric-500 text-white p-2 rounded-lg flex items-center justify-center transition-all duration-300 group-hover:bg-electric-600 shadow-lg shadow-electric-500/20">
+                    <!-- Secure Shield SVG -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                </div>
+                <span class="font-heading font-bold text-xl tracking-tight dark:text-white text-navy-950">UPI<span class="text-electric-500">Secure</span></span>
+            </a>
+
+            <!-- Navigation Links (Desktop) & Theme Toggle -->
+            <div class="flex items-center space-x-6">
+                <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+                    <a href="#why-matters" class="hover:text-electric-500 transition-colors">Why It Matters</a>
+                    <a href="#what-learn" class="hover:text-electric-500 transition-colors">What You'll Learn</a>
+                    <a href="#showcase" class="hover:text-electric-500 transition-colors">Inside the Book</a>
+                    <a href="#testimonials" class="hover:text-electric-500 transition-colors">Reviews</a>
+                    <a href="#faq" class="hover:text-electric-500 transition-colors">FAQ</a>
+                </nav>
+
+                <!-- Dark / Light Mode Button -->
+                <button id="theme-toggle" aria-label="Toggle dark mode" class="p-2.5 rounded-lg border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors text-slate-600 dark:text-slate-400">
+                    <!-- Dark (Moon) Icon -->
+                    <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                    </svg>
+                    <!-- Light (Sun) Icon -->
+                    <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464a1 1 0 10-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 100 2h1z" fill-rule="evenodd" clip-rule="evenodd"></path>
+                    </svg>
+                </button>
+
+                <!-- Primary CTA Header -->
+                <a href="#purchase" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-semibold tracking-wide text-white bg-electric-500 hover:bg-electric-600 rounded-lg transition-all shadow-md shadow-electric-500/10 hover:shadow-electric-500/25">
+                    Buy Handbook
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen pt-36 pb-16 flex items-center overflow-hidden">
+        <!-- Floating Ambient Gradients -->
+        <div class="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-electric-500/10 rounded-full blur-[100px] pointer-events-none animate-pulse-slow"></div>
+        <div class="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-[400px] h-[400px] bg-emerald-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-6 w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+            
+            <!-- Left Info Panel -->
+            <div class="lg:col-span-7 flex flex-col space-y-6 text-left md:pr-4">
+                <!-- Premium Tagline -->
+                <div class="inline-flex items-center space-x-2 bg-emerald-500/10 text-emerald-500 dark:text-emerald-400 px-3 py-1 rounded-full text-xs font-semibold border border-emerald-500/20 max-w-fit animate-fadeInUp">
+                    <!-- Green Check Icon -->
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span>Fully Updated for 2026 Scams</span>
+                </div>
+
+                <!-- Emotional Hook Headline -->
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight dark:text-white text-navy-950 font-heading tracking-tight animate-fadeInUp" style="animation-delay: 0.1s;">
+                    One Wrong UPI Click <br class="hidden md:inline" />
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-500 to-amber-500 font-extrabold">Can Empty Your Account</span> — <br />
+                    Learn How to Stay Safe.
+                </h1>
+
+                <!-- Subheadline -->
+                <p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl font-light leading-relaxed animate-fadeInUp" style="animation-delay: 0.2s;">
+                    Practical protection strategies, scam awareness, and safe payment habits explained simply. Stop scammers in their tracks and secure your hard-earned savings.
+                </p>
+
+                <!-- Trust Indicators Grid -->
+                <div class="grid grid-cols-3 gap-2 md:gap-4 py-2 border-y border-slate-200/60 dark:border-white/5 max-w-xl text-sm animate-fadeInUp" style="animation-delay: 0.3s;">
+                    <div class="flex items-center space-x-2 font-medium">
+                        <span class="text-emerald-500 font-bold text-lg">✓</span>
+                        <span class="text-slate-700 dark:text-slate-300 text-xs md:text-sm">Digital Download</span>
+                    </div>
+                    <div class="flex items-center space-x-2 font-medium">
+                        <span class="text-emerald-500 font-bold text-lg">✓</span>
+                        <span class="text-slate-700 dark:text-slate-300 text-xs md:text-sm">Instant Access</span>
+                    </div>
+                    <div class="flex items-center space-x-2 font-medium">
+                        <span class="text-emerald-500 font-bold text-lg">✓</span>
+                        <span class="text-slate-700 dark:text-slate-300 text-xs md:text-sm">Easy to Understand</span>
+                    </div>
+                </div>
+
+                <!-- Action CTAs -->
+                <div class="flex flex-col sm:flex-row gap-4 pt-2 animate-fadeInUp" style="animation-delay: 0.4s;">
+                    <a href="#purchase" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-electric-500 hover:bg-electric-600 rounded-xl transition-all shadow-xl shadow-electric-500/20 hover:shadow-electric-500/35 hover:-translate-y-0.5 group">
+                        Get Instant Access
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                        </svg>
+                    </a>
+                    <button onclick="openPreviewModal()" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-white/5 rounded-xl transition-all hover:-translate-y-0.5">
+                        Preview Free Chapter
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Book Mockup -->
+            <div class="lg:col-span-5 flex justify-center items-center py-6 animate-fadeInUp" style="animation-delay: 0.2s;">
+                <div class="cover-display-wrap">
+                    <div class="cover-display animate-float">
+                        <img src="upi_ebook_cover.jpg" alt="UPI Safety Handbook — Protect Your Money" class="cover-display-img">
+                        <!-- Premium gloss overlay -->
+                        <div class="cover-display-gloss"></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section 2 — Why This Handbook Matters -->
+    <section id="why-matters" class="relative py-24 border-t border-slate-200/60 dark:border-white/5 bg-slate-100/30 dark:bg-navy-950/40 scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-electric-500 dark:text-electric-500 text-electric-600 text-xs font-bold uppercase tracking-widest">The Threat Landscape</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight dark:text-white text-navy-950 font-heading">
+                    UPI Scams Are Evolving <br />Faster Than Most People Realize
+                </h2>
+                <div class="w-16 h-1 bg-electric-500 mx-auto rounded-full"></div>
+                <p class="text-slate-600 dark:text-slate-400 font-light max-w-2xl mx-auto">
+                    Modern scammers don't hack your bank account directly—they hack your trust and behavior. Here are the 4 most common traps this guide helps you defeat.
+                </p>
+            </div>
+
+            <!-- 4 Premium Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Card 1: Fake payment screenshots -->
+                <div class="group glass p-8 rounded-2xl flex flex-col justify-between hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute -top-12 -right-12 w-24 h-24 bg-red-500/10 rounded-full blur-2xl group-hover:bg-red-500/20 transition-all"></div>
+                    <div>
+                        <!-- Phone / Screenshot Icon -->
+                        <div class="w-12 h-12 rounded-xl bg-red-500/15 border border-red-500/20 flex items-center justify-center text-red-500 mb-6 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-heading font-semibold text-lg mb-3 dark:text-white text-navy-950">Fake Payment Screenshots</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                            Scammers use specialized spoof apps to generate realistic success screens, fooling sellers into handing over goods without receiving the cash.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2: QR code traps -->
+                <div class="group glass p-8 rounded-2xl flex flex-col justify-between hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute -top-12 -right-12 w-24 h-24 bg-amber-500/10 rounded-full blur-2xl group-hover:bg-amber-500/20 transition-all"></div>
+                    <div>
+                        <!-- QR Code Icon -->
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/15 border border-amber-500/20 flex items-center justify-center text-amber-500 mb-6 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-heading font-semibold text-lg mb-3 dark:text-white text-navy-950">QR Code Traps</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                            "Scan to receive money." Scammers send a QR code that triggers a *debit* transaction instead of credit, stealing your balance in seconds.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Remote access fraud -->
+                <div class="group glass p-8 rounded-2xl flex flex-col justify-between hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute -top-12 -right-12 w-24 h-24 bg-electric-500/10 rounded-full blur-2xl group-hover:bg-electric-500/20 transition-all"></div>
+                    <div>
+                        <!-- Remote Screen Icon -->
+                        <div class="w-12 h-12 rounded-xl bg-electric-500/15 border border-electric-500/20 flex items-center justify-center text-electric-500 mb-6 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-heading font-semibold text-lg mb-3 dark:text-white text-navy-950">Remote Access Fraud</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                            Under the guise of bank support, callers guide targets to install screen-sharing apps like AnyDesk, capturing passwords and OTPs live.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 4: Social engineering tactics -->
+                <div class="group glass p-8 rounded-2xl flex flex-col justify-between hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                    <div class="absolute -top-12 -right-12 w-24 h-24 bg-emerald-500/10 rounded-full blur-2xl group-hover:bg-emerald-500/20 transition-all"></div>
+                    <div>
+                        <!-- Brain / Human Interaction Icon -->
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/15 border border-emerald-500/20 flex items-center justify-center text-emerald-500 mb-6 group-hover:scale-110 transition-transform">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-heading font-semibold text-lg mb-3 dark:text-white text-navy-950">Social Engineering</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                            Fake fear elements like threat of power bills cutting off, tax collection, or custom duties. They manipulate your panic state to initiate payments.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section 3 — What You'll Learn -->
+    <section id="what-learn" class="relative py-24 scroll-mt-24">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-electric-500/5 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-emerald-500 dark:text-emerald-400 text-emerald-600 text-xs font-bold uppercase tracking-widest">Inside The Curriculum</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight dark:text-white text-navy-950 font-heading">
+                    Equip Yourself with Practical Security Skills
+                </h2>
+                <div class="w-16 h-1 bg-emerald-500 mx-auto rounded-full"></div>
+                <p class="text-slate-600 dark:text-slate-400 font-light max-w-2xl mx-auto">
+                    This book strips away complex jargon to give you simple checklists, behavioral steps, and active measures to keep your wealth intact.
+                </p>
+            </div>
+
+            <!-- 6 learning cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1: Understanding modern UPI scams -->
+                <div class="glass p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-electric-500/30 transition-all duration-300">
+                    <div class="flex items-start space-x-4">
+                        <div class="text-3xl">📘</div>
+                        <div class="space-y-2">
+                            <h3 class="font-heading font-semibold text-lg dark:text-white text-navy-950">Understanding modern UPI scams</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                                Trace the exact step-by-step scripts that scammers use on phone calls. Learn their psychological cues.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Protecting your accounts -->
+                <div class="glass p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-electric-500/30 transition-all duration-300">
+                    <div class="flex items-start space-x-4">
+                        <div class="text-3xl">🛡️</div>
+                        <div class="space-y-2">
+                            <h3 class="font-heading font-semibold text-lg dark:text-white text-navy-950">Protecting your accounts</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                                Lock down your mobile banking applications, configure multi-factor checks, and secure SIM registration.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Secure payment habits -->
+                <div class="glass p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-electric-500/30 transition-all duration-300">
+                    <div class="flex items-start space-x-4">
+                        <div class="text-3xl">📱</div>
+                        <div class="space-y-2">
+                            <h3 class="font-heading font-semibold text-lg dark:text-white text-navy-950">Secure payment habits</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                                Double-verification habits, scanning hygiene, and standard safety behaviors for daily grocery checkout.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Recognizing red flags -->
+                <div class="glass p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-electric-500/30 transition-all duration-300">
+                    <div class="flex items-start space-x-4">
+                        <div class="text-3xl">⚠️</div>
+                        <div class="space-y-2">
+                            <h3 class="font-heading font-semibold text-lg dark:text-white text-navy-950">Recognizing red flags</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                                Learn the keywords, payment link formats, and rush behavior styles that signal high-risk fraud setups.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5: Privacy best practices -->
+                <div class="glass p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-electric-500/30 transition-all duration-300">
+                    <div class="flex items-start space-x-4">
+                        <div class="text-3xl">🔐</div>
+                        <div class="space-y-2">
+                            <h3 class="font-heading font-semibold text-lg dark:text-white text-navy-950">Privacy best practices</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                                Prevent sharing identifiers, protect phone numbers from online directory scrapers, and secure your UPI ID.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: Recovery steps after fraud -->
+                <div class="glass p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-electric-500/30 transition-all duration-300">
+                    <div class="flex items-start space-x-4">
+                        <div class="text-3xl">🚨</div>
+                        <div class="space-y-2">
+                            <h3 class="font-heading font-semibold text-lg dark:text-white text-navy-950">Recovery steps after fraud</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-light">
+                                Exact links, contact channels, cyber cell reporting rules, and how to trigger instant transaction freezes.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section 4 — Ebook Showcase -->
+    <section id="showcase" class="relative py-24 border-t border-slate-200/60 dark:border-white/5 bg-slate-100/30 dark:bg-navy-950/40 scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-6 relative z-10 flex flex-col items-center">
+            
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-electric-500 dark:text-electric-500 text-electric-600 text-xs font-bold uppercase tracking-widest">Interactive Showcase</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight dark:text-white text-navy-950 font-heading">
+                    Peek Inside the Handbook
+                </h2>
+                <div class="w-16 h-1 bg-electric-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center w-full">
+                
+                <!-- Mockup Space -->
+                <div class="lg:col-span-5 flex justify-center items-center">
+                    <div class="cover-display-wrap">
+                        <div class="cover-display">
+                            <img src="upi_ebook_cover.jpg" alt="UPI Safety Handbook — Protect Your Money" class="cover-display-img">
+                            <div class="cover-display-gloss"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Handbook Features & Interactive Chapter Preview -->
+                <div class="lg:col-span-7 space-y-8">
+                    <h3 class="text-2xl font-bold dark:text-white text-navy-950 font-heading">Complete Peace of Mind, Packaged Simply</h3>
+                    
+                    <p class="text-slate-600 dark:text-slate-400 font-light leading-relaxed">
+                        No technical degrees or developer skills needed. This handbook translates high-level cyber security practices into easy-to-remember rules of thumb. Written for parents, business owners, students, and active UPI users alike.
+                    </p>
+
+                    <!-- Feature Bullet Points -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm font-medium">
+                        <div class="flex items-center space-x-3 text-slate-700 dark:text-slate-300">
+                            <!-- Green check icon -->
+                            <div class="bg-emerald-500/10 text-emerald-500 p-1.5 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <span>Clean chapter preview</span>
+                        </div>
+                        
+                        <div class="flex items-center space-x-3 text-slate-700 dark:text-slate-300">
+                            <div class="bg-emerald-500/10 text-emerald-500 p-1.5 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <span>Estimated reading time: 45 min</span>
+                        </div>
+
+                        <div class="flex items-center space-x-3 text-slate-700 dark:text-slate-300">
+                            <div class="bg-emerald-500/10 text-emerald-500 p-1.5 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <span>100% Beginner friendly</span>
+                        </div>
+
+                        <div class="flex items-center space-x-3 text-slate-700 dark:text-slate-300">
+                            <div class="bg-emerald-500/10 text-emerald-500 p-1.5 rounded-lg">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+                                </svg>
+                            </div>
+                            <span>Lifetime access & free updates</span>
+                        </div>
+                    </div>
+
+                    <!-- Actions -->
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="#purchase" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold text-white bg-electric-500 hover:bg-electric-600 rounded-xl transition-all shadow-xl shadow-electric-500/20 hover:shadow-electric-500/35 hover:-translate-y-0.5">
+                            Buy Now (₹499)
+                        </a>
+                        <button onclick="openPreviewModal()" class="inline-flex items-center justify-center px-8 py-4 text-base font-semibold border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-white/5 rounded-xl transition-all hover:-translate-y-0.5">
+                            Read Free Sample
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section 5 — Social Proof -->
+    <section id="testimonials" class="relative py-24 scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-electric-500 dark:text-electric-500 text-electric-600 text-xs font-bold uppercase tracking-widest">Real Feedback</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight dark:text-white text-navy-950 font-heading">
+                    Trusted by Active Digital Payers
+                </h2>
+                <div class="w-16 h-1 bg-electric-500 mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Testimonials Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Review 1 -->
+                <div class="glass p-8 rounded-2xl flex flex-col justify-between hover:scale-[1.01] transition-transform duration-300 relative border border-white/5">
+                    <!-- Rating Stars -->
+                    <div class="space-y-4">
+                        <div class="flex text-amber-400 space-x-1">
+                            <span class="text-xl">★</span><span class="text-xl">★</span><span class="text-xl">★</span><span class="text-xl">★</span><span class="text-xl">★</span>
+                        </div>
+                        <p class="text-slate-700 dark:text-slate-300 italic font-light text-sm leading-relaxed">
+                            “This handbook explained UPI safety more clearly than any article I have read online. The visual breakdown of how scammers generate fake payment notifications is extremely useful.”
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-4 pt-6 mt-6 border-t border-white/5">
+                        <img src="avatar_sk.png" alt="Sandeep Kumar" class="w-10 h-10 rounded-full object-cover border-2 border-electric-500/20">
+                        <div>
+                            <div class="flex items-center space-x-1.5">
+                                <h4 class="font-heading font-semibold text-sm dark:text-white text-navy-950">Sandeep Kumar</h4>
+                                <span class="bg-emerald-500/20 text-emerald-500 p-0.5 rounded text-[8px] font-bold">✓ Verified</span>
+                            </div>
+                            <span class="text-[11px] text-slate-500 font-light">Small Business Owner</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="glass p-8 rounded-2xl flex flex-col justify-between hover:scale-[1.01] transition-transform duration-300 relative border border-white/5">
+                    <!-- Rating Stars -->
+                    <div class="space-y-4">
+                        <div class="flex text-amber-400 space-x-1">
+                            <span class="text-xl">★</span><span class="text-xl">★</span><span class="text-xl">★</span><span class="text-xl">★</span><span class="text-xl">★</span>
+                        </div>
+                        <p class="text-slate-700 dark:text-slate-300 italic font-light text-sm leading-relaxed">
+                            “Easy to read and immediately useful. I bought it for my elderly parents who were worried about scanning QR codes. They feel much more confident and secure now.”
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-4 pt-6 mt-6 border-t border-white/5">
+                        <img src="avatar_ar.png" alt="Aishwarya R." class="w-10 h-10 rounded-full object-cover border-2 border-electric-500/20">
+                        <div>
+                            <div class="flex items-center space-x-1.5">
+                                <h4 class="font-heading font-semibold text-sm dark:text-white text-navy-950">Aishwarya R.</h4>
+                                <span class="bg-emerald-500/20 text-emerald-500 p-0.5 rounded text-[8px] font-bold">✓ Verified</span>
+                            </div>
+                            <span class="text-[11px] text-slate-500 font-light">Software Engineer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="glass p-8 rounded-2xl flex flex-col justify-between hover:scale-[1.01] transition-transform duration-300 relative border border-white/5">
+                    <!-- Rating Stars -->
+                    <div class="space-y-4">
+                        <div class="flex text-amber-400 space-x-1">
+                            <span class="text-xl">★</span><span class="text-xl">★</span><span class="text-xl">★</span><span class="text-xl">★</span><span class="text-xl">★</span>
+                        </div>
+                        <p class="text-slate-700 dark:text-slate-300 italic font-light text-sm leading-relaxed">
+                            “The checklist on remote access scam calls saved my neighbor's credit card. Just a 45-minute read but contains rules of thumb everyone should stick on their fridge.”
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-4 pt-6 mt-6 border-t border-white/5">
+                        <img src="avatar_pp.png" alt="Prakash Patil" class="w-10 h-10 rounded-full object-cover border-2 border-electric-500/20">
+                        <div>
+                            <div class="flex items-center space-x-1.5">
+                                <h4 class="font-heading font-semibold text-sm dark:text-white text-navy-950">Prakash Patil</h4>
+                                <span class="bg-emerald-500/20 text-emerald-500 p-0.5 rounded text-[8px] font-bold">✓ Verified</span>
+                            </div>
+                            <span class="text-[11px] text-slate-500 font-light">Retired Bank Manager</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section 6 — Why Buy Now -->
+    <section id="purchase" class="relative py-24 border-t border-slate-200/60 dark:border-white/5 bg-gradient-to-b from-navy-950 to-slate-900/50 scroll-mt-24">
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-electric-500/5 rounded-full blur-[140px] pointer-events-none"></div>
+        
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <!-- Glass Purchase Container -->
+            <div class="glass p-8 md:p-12 rounded-3xl border border-white/10 relative overflow-hidden flex flex-col md:flex-row gap-8 items-center">
+                
+                <!-- Tag background glowing -->
+                <div class="absolute -right-24 -bottom-24 w-80 h-80 bg-emerald-500/10 rounded-full blur-[80px] pointer-events-none"></div>
+
+                <!-- Info Column -->
+                <div class="md:w-3/5 space-y-6 text-left">
+                    <div class="inline-flex items-center space-x-2 bg-emerald-500/10 text-emerald-500 dark:text-emerald-400 px-3 py-1 rounded-full text-xs font-semibold border border-emerald-500/20 max-w-fit">
+                        <span>Save 70% Today</span>
+                    </div>
+
+                    <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight dark:text-white text-navy-950 font-heading">
+                        Protect Your Money Before You Need This Knowledge
+                    </h2>
+
+                    <p class="text-slate-600 dark:text-slate-400 font-light text-sm leading-relaxed">
+                        A single scam can cost thousands, or even empty your entire life savings. For less than the price of a coffee, secure your peace of mind and protect your family from digital traps.
+                    </p>
+
+                    <!-- Benefits list -->
+                    <div class="grid grid-cols-2 gap-4 text-xs font-semibold text-slate-700 dark:text-slate-300">
+                        <div class="flex items-center space-x-2">
+                            <span class="text-emerald-500">✓</span>
+                            <span>Instant Download</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-emerald-500">✓</span>
+                            <span>One-time purchase</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-emerald-500">✓</span>
+                            <span>Keep forever</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-emerald-500">✓</span>
+                            <span>Read anytime</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Checkout Card -->
+                <div class="md:w-2/5 w-full bg-white dark:bg-slate-900/60 p-8 rounded-2xl border border-slate-200/80 dark:border-white/5 flex flex-col items-center justify-between text-center relative z-10 shadow-xl">
+                    <span class="text-xs uppercase font-bold tracking-widest text-slate-400">Digital Edition</span>
+                    
+                    <div class="my-6">
+                        <span class="text-sm line-through text-slate-500 font-medium">₹999</span>
+                        <div class="flex items-center justify-center space-x-1">
+                            <span class="text-3xl md:text-4xl font-extrabold dark:text-white text-navy-950 font-heading">₹499</span>
+                            <span class="text-xs font-semibold text-slate-400">INR</span>
+                        </div>
+                    </div>
+
+                    <button onclick="simulatePurchase()" class="w-full py-4 text-sm font-bold text-white bg-electric-500 hover:bg-electric-600 rounded-xl transition-all shadow-lg shadow-electric-500/25 hover:shadow-electric-500/40 hover:-translate-y-0.5">
+                        Get Your Copy Today
+                    </button>
+
+                    <span class="text-[10px] text-slate-500 font-light mt-4 flex items-center justify-center space-x-1">
+                        <!-- Shield lock SVG -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-3.5 w-3.5 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+                        </svg>
+                        <span>Secure Checkout</span>
+                    </span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 7 — FAQ -->
+    <section id="faq" class="relative py-24 scroll-mt-24">
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span class="text-electric-500 dark:text-electric-500 text-electric-600 text-xs font-bold uppercase tracking-widest">Help Center</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight dark:text-white text-navy-950 font-heading">
+                    Frequently Asked Questions
+                </h2>
+                <div class="w-16 h-1 bg-electric-500 mx-auto rounded-full"></div>
+            </div>
+
+            <!-- FAQ Accordion Layout -->
+            <div class="space-y-4">
+                
+                <!-- Q1 -->
+                <div class="glass rounded-xl border border-white/5 overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full px-6 py-5 flex justify-between items-center text-left focus:outline-none" aria-expanded="false">
+                        <span class="font-heading font-semibold text-slate-200 dark:text-slate-200 text-slate-800">Is this for beginners?</span>
+                        <span class="faq-icon transform transition-transform duration-300 text-slate-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="px-6 pb-6 text-sm text-slate-600 dark:text-slate-400 font-light leading-relaxed">
+                            Yes! This guide is completely written in plain English, with no security degrees or software jargon needed. It focuses on simple behaviors, common visual indicators (red flags), and templates of scam calls.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q2 -->
+                <div class="glass rounded-xl border border-white/5 overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full px-6 py-5 flex justify-between items-center text-left focus:outline-none" aria-expanded="false">
+                        <span class="font-heading font-semibold text-slate-200 dark:text-slate-200 text-slate-800">How do I receive the ebook?</span>
+                        <span class="faq-icon transform transition-transform duration-300 text-slate-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="px-6 pb-6 text-sm text-slate-600 dark:text-slate-400 font-light leading-relaxed">
+                            Directly after completing checkout, you will receive an email containing a secure download link. You can save it as a PDF or EPUB file immediately to keep on your devices.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q3 -->
+                <div class="glass rounded-xl border border-white/5 overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full px-6 py-5 flex justify-between items-center text-left focus:outline-none" aria-expanded="false">
+                        <span class="font-heading font-semibold text-slate-200 dark:text-slate-200 text-slate-800">Is it mobile friendly?</span>
+                        <span class="faq-icon transform transition-transform duration-300 text-slate-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="px-6 pb-6 text-sm text-slate-600 dark:text-slate-400 font-light leading-relaxed">
+                            Absolutely. The PDF format is styled dynamically, and the EPUB file automatically reformats layout sizing to look beautiful on any mobile, tablet, or Kindle screen.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q4 -->
+                <div class="glass rounded-xl border border-white/5 overflow-hidden transition-all duration-300">
+                    <button class="faq-btn w-full px-6 py-5 flex justify-between items-center text-left focus:outline-none" aria-expanded="false">
+                        <span class="font-heading font-semibold text-slate-200 dark:text-slate-200 text-slate-800">Can I read offline?</span>
+                        <span class="faq-icon transform transition-transform duration-300 text-slate-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="faq-content max-h-0 overflow-hidden transition-all duration-300 ease-in-out">
+                        <div class="px-6 pb-6 text-sm text-slate-600 dark:text-slate-400 font-light leading-relaxed">
+                            Yes. Once downloaded, the ebook file lives on your local device memory forever. You can open and read it offline anytime without an active internet connection.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="relative bg-slate-950 border-t border-white/5 py-12 text-slate-500 text-sm">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+            
+            <div class="space-y-4">
+                <a href="#" class="flex items-center space-x-2">
+                    <div class="bg-electric-500 text-white p-1.5 rounded flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                    </div>
+                    <span class="font-heading font-bold text-lg dark:text-white text-navy-950">UPI<span class="text-electric-500">Secure</span></span>
+                </a>
+                <p class="text-xs text-slate-600 leading-relaxed font-light">
+                    Helping you navigate the digital transaction landscape safely.
+                </p>
+            </div>
+
+            <!-- Links Column -->
+            <div class="space-y-3">
+                <h4 class="font-heading font-semibold text-slate-300 dark:text-slate-300 text-slate-800 text-xs tracking-wider uppercase">Product</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#why-matters" class="hover:text-white transition-colors">Why It Matters</a></li>
+                    <li><a href="#what-learn" class="hover:text-white transition-colors">What You'll Learn</a></li>
+                    <li><a href="#showcase" class="hover:text-white transition-colors">Chapter Previews</a></li>
+                </ul>
+            </div>
+
+            <!-- Legal Column -->
+            <div class="space-y-3">
+                <h4 class="font-heading font-semibold text-slate-300 dark:text-slate-300 text-slate-800 text-xs tracking-wider uppercase">Legal</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html" class="hover:text-white transition-colors">Terms of Service</a></li>
+                    <li><a href="disclaimer.html" class="hover:text-white transition-colors">Disclaimer</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Column -->
+            <div class="space-y-3">
+                <h4 class="font-heading font-semibold text-slate-300 dark:text-slate-300 text-slate-800 text-xs tracking-wider uppercase">Contact</h4>
+                <p class="text-xs text-slate-600 leading-relaxed font-light">
+                    Support: <span class="text-slate-400 font-medium">support@upisecure.com</span>
+                </p>
+                <p class="text-xs text-slate-600 leading-relaxed font-light">
+                    Official Cybercrime Helpline: <span class="text-emerald-500 font-semibold">1930</span>
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Copyright bar -->
+        <div class="max-w-7xl mx-auto px-6 border-t border-white/5 mt-8 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-600">
+            <span>© 2026 UPISecure. All rights reserved.</span>
+            <span>Made with digital trust.</span>
+        </div>
+    </footer>
+
+    <!-- Interactive Sticky CTA Button (bottom desktop right, mobile full-width bar) -->
+    <div id="sticky-cta" class="fixed bottom-0 left-0 w-full md:bottom-6 md:right-6 md:left-auto md:w-auto z-40 transform translate-y-full opacity-0 transition-all duration-500 ease-out">
+        <!-- Desktop Glass Floating Card / Mobile Bar -->
+        <div class="glass px-6 py-4 md:rounded-2xl border-t border-white/10 md:border md:border-white/10 flex items-center justify-between gap-6 md:shadow-2xl shadow-electric-500/10 w-full md:max-w-sm">
+            <div class="flex items-center space-x-3">
+                <div class="w-8 h-12 relative flex-shrink-0">
+                    <img src="upi_ebook_cover.jpg" alt="Cover thumbnail" class="w-full h-full object-cover rounded shadow">
+                </div>
+                <div>
+                    <h4 class="font-heading font-bold text-xs dark:text-white text-navy-950 truncate max-w-[150px]">UPI Safety Handbook</h4>
+                    <span class="text-emerald-500 font-bold text-sm">₹499</span>
+                </div>
+            </div>
+            <a href="#purchase" class="px-5 py-2.5 text-xs font-bold text-white bg-electric-500 hover:bg-electric-600 rounded-lg transition-colors flex-shrink-0">
+                Get Access
+            </a>
+        </div>
+    </div>
+
+    <!-- Free Chapter Preview Modal (Slide-in Right Panel) -->
+    <div id="preview-modal" class="fixed inset-0 z-50 invisible transition-all duration-300" aria-hidden="true">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-navy-950/80 backdrop-blur-sm transition-opacity opacity-0" id="preview-modal-backdrop"></div>
+        
+        <!-- Sliding Content -->
+        <div class="absolute top-0 right-0 h-full w-full max-w-lg bg-slate-900 dark:bg-slate-900 bg-white border-l border-slate-200 dark:border-white/5 shadow-2xl transform translate-x-full transition-transform duration-300 ease-out flex flex-col" id="preview-modal-panel">
+            
+            <!-- Modal Header -->
+            <div class="px-6 py-5 border-b border-slate-200 dark:border-white/5 flex justify-between items-center flex-shrink-0">
+                <div>
+                    <span class="text-electric-500 text-[10px] font-bold uppercase tracking-widest">Free Sample</span>
+                    <h3 class="font-heading font-bold text-lg dark:text-white text-navy-950">Chapter 1: The Anatomy of a Scam</h3>
+                </div>
+                <button onclick="closePreviewModal()" class="p-2 rounded-lg border border-slate-200 dark:border-white/5 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors text-slate-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Ebook Content Viewer (Legible Book pages simulator) -->
+            <div class="flex-grow overflow-y-auto p-6 md:p-8 space-y-6 text-sm text-slate-700 dark:text-slate-300 leading-relaxed font-light">
+                
+                <div class="border-b border-white/5 pb-4 mb-6">
+                    <h4 class="font-heading font-semibold text-base mb-2 dark:text-white text-navy-950">1.1 The Golden Rule: UPI PIN is Only for Paying</h4>
+                    <p class="italic text-slate-500 text-xs">Page 12 — UPI Safety Handbook</p>
+                </div>
+
+                <p>
+                    Understanding the core mechanism of UPI is your first and most absolute layer of protection. There is one fundamental technical truth that scammers will always try to hide from you:
+                </p>
+
+                <!-- Key Concept Callout -->
+                <div class="bg-amber-500/10 text-amber-500 border border-amber-500/20 p-4 rounded-xl space-y-2">
+                    <span class="font-bold text-xs uppercase tracking-wider block">🛡️ Core Security rule</span>
+                    <p class="font-medium text-sm leading-relaxed">
+                        Entering your UPI PIN always DEBITS money from your account. You NEVER need to enter your PIN to receive money.
+                    </p>
+                </div>
+
+                <p>
+                    If a buyer claims they are sending you money, and asks you to enter your PIN or scans a "received QR code," the transaction is a debit setup. Real credit transactions happen instantly without any actions on the receiver's end.
+                </p>
+
+                <div class="border-b border-white/5 pb-4 my-8">
+                    <h4 class="font-heading font-semibold text-base mb-2 dark:text-white text-navy-950">1.2 Anatomy of the QR Code Trap</h4>
+                    <p class="italic text-slate-500 text-xs">Page 14 — UPI Safety Handbook</p>
+                </div>
+
+                <p>
+                    The QR code trap starts with an listing on classifieds websites (OLX, Facebook Marketplace). A scammer contact you acting eager to purchase your item.
+                </p>
+
+                <p class="mb-4">
+                    They claim they cannot visit you in person, and want to send advance payment. They send you an image of a QR code via WhatsApp with text reading:
+                </p>
+
+                <!-- Simulated WhatsApp Message -->
+                <div class="bg-emerald-500/10 border border-emerald-500/20 p-4 rounded-xl font-mono text-xs text-slate-300 space-y-1">
+                    <div class="text-emerald-500 font-bold mb-1">[WhatsApp Message received]</div>
+                    <span>"Sir, I have scanned and sent money. Please scan this receipt code to confirm payment in your bank account."</span>
+                </div>
+
+                <p class="mt-4">
+                    When you scan this code with your UPI app, a prompt appears showing: <span class="font-semibold text-red-500 font-mono">Paying: sandeep_store@okaxis</span>.
+                </p>
+                
+                <p>
+                    Instead of reading this carefully, people are pressured by the scammer on the phone, who says: "Click OK, click PAY, and type your PIN so the transaction registers."
+                </p>
+
+                <div class="bg-electric-500/10 border border-electric-500/20 p-6 rounded-xl text-center space-y-4 my-6">
+                    <h5 class="font-heading font-bold text-base dark:text-white text-navy-950">Ready to Learn the Rest?</h5>
+                    <p class="text-xs text-slate-400">Unlock 12 more scam breakdowns, incident checklists, and banking backup guides.</p>
+                    <a href="#purchase" onclick="closePreviewModal()" class="inline-flex w-full justify-center py-3 text-xs font-bold text-white bg-electric-500 hover:bg-electric-600 rounded-lg transition-colors">
+                        Unlock Ebook Now (₹499)
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Exit Intent Popup (Discount Offer Modal) -->
+    <div id="exit-intent-modal" class="fixed inset-0 z-50 invisible transition-all duration-300" aria-hidden="true">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-navy-950/80 backdrop-blur-sm transition-opacity opacity-0" id="exit-backdrop"></div>
+        
+        <!-- Modal Dialog Box -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] max-w-md glass p-8 rounded-3xl border border-white/10 shadow-2xl transform scale-95 opacity-0 transition-all duration-300 flex flex-col items-center text-center bg-slate-900" id="exit-dialog">
+            
+            <!-- Shield alert icon -->
+            <div class="w-16 h-16 rounded-full bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-500 mb-6">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                </svg>
+            </div>
+
+            <h3 class="font-heading font-extrabold text-2xl dark:text-white text-navy-950 mb-2">Wait! Don't Leave Unprotected</h3>
+            
+            <p class="text-sm text-slate-600 dark:text-slate-400 font-light leading-relaxed mb-6">
+                UPI fraud rises daily. Get a special <span class="text-emerald-500 font-semibold">20% discount code</span> now and protect your assets.
+            </p>
+
+            <!-- Coupon Box -->
+            <div class="w-full bg-white/5 border border-white/5 rounded-xl py-3 px-4 mb-6 flex justify-between items-center font-mono text-sm">
+                <span class="text-slate-500">CODE:</span>
+                <span class="text-emerald-500 font-bold tracking-wider">UPISAFE20</span>
+            </div>
+
+            <div class="flex flex-col w-full gap-3">
+                <a href="#purchase" onclick="closeExitModal(true)" class="w-full py-4 text-sm font-bold text-white bg-emerald-500 hover:bg-emerald-600 rounded-xl transition-all shadow-lg shadow-emerald-500/25">
+                    Claim 20% Discount
+                </a>
+                <button onclick="closeExitModal(false)" class="w-full py-3.5 text-xs text-slate-400 hover:text-white transition-colors">
+                    No thanks, I'll take the risk
+                </button>
+            </div>
+
+            <!-- Absolute Close button -->
+            <button onclick="closeExitModal(false)" class="absolute top-4 right-4 p-2 text-slate-500 hover:text-slate-300">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // --- 1. DARK / LIGHT MODE CONTROLLER ---
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        // Check theme status
+        function updateThemeIcons() {
+            if (document.documentElement.classList.contains('dark')) {
+                themeToggleLightIcon.classList.remove('hidden');
+                themeToggleDarkIcon.classList.add('hidden');
+            } else {
+                themeToggleDarkIcon.classList.remove('hidden');
+                themeToggleLightIcon.classList.add('hidden');
+            }
+        }
+
+        // Initialize state
+        if (localStorage.getItem('color-theme') === 'dark' || 
+            (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            document.documentElement.classList.remove('light');
+        } else {
+            document.documentElement.classList.add('light');
+            document.documentElement.classList.remove('dark');
+        }
+        updateThemeIcons();
+
+        // Button Click Handler
+        themeToggleBtn.addEventListener('click', () => {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                document.documentElement.classList.add('light');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                document.documentElement.classList.remove('light');
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+            updateThemeIcons();
+        });
+
+
+        // --- 2. FAQ ACCORDION HANDLER ---
+        const faqBtns = document.querySelectorAll('.faq-btn');
+        faqBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+                const content = btn.nextElementSibling;
+                const icon = btn.querySelector('.faq-icon');
+
+                // Collapse all FAQs first (Optional, but looks premium)
+                faqBtns.forEach(otherBtn => {
+                    if (otherBtn !== btn) {
+                        otherBtn.setAttribute('aria-expanded', 'false');
+                        otherBtn.nextElementSibling.style.maxHeight = '0px';
+                        otherBtn.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+                    }
+                });
+
+                if (isExpanded) {
+                    btn.setAttribute('aria-expanded', 'false');
+                    content.style.maxHeight = '0px';
+                    icon.style.transform = 'rotate(0deg)';
+                } else {
+                    btn.setAttribute('aria-expanded', 'true');
+                    content.style.maxHeight = content.scrollHeight + 'px';
+                    icon.style.transform = 'rotate(180deg)';
+                }
+            });
+        });
+
+
+        // --- 3. STICKY CTA SCROLL EFFECT ---
+        const stickyCta = document.getElementById('sticky-cta');
+        window.addEventListener('scroll', () => {
+            // Show after scrolling 600px
+            if (window.scrollY > 600) {
+                stickyCta.classList.remove('translate-y-full', 'opacity-0');
+                stickyCta.classList.add('translate-y-0', 'opacity-100');
+            } else {
+                stickyCta.classList.add('translate-y-full', 'opacity-0');
+                stickyCta.classList.remove('translate-y-0', 'opacity-100');
+            }
+        });
+
+
+        // --- 4. EXIT INTENT POPUP ---
+        let hasShownExitIntent = false;
+        const exitModal = document.getElementById('exit-intent-modal');
+        const exitBackdrop = document.getElementById('exit-backdrop');
+        const exitDialog = document.getElementById('exit-dialog');
+
+        document.addEventListener('mouseleave', (e) => {
+            // Detect if the mouse leaves the top boundary of the viewport
+            if (e.clientY < 20 && !hasShownExitIntent && !localStorage.getItem('dismissedExitIntent')) {
+                showExitModal();
+            }
+        });
+
+        function showExitModal() {
+            hasShownExitIntent = true;
+            exitModal.classList.remove('invisible');
+            
+            // Allow layout render before animation triggers
+            setTimeout(() => {
+                exitBackdrop.classList.remove('opacity-0');
+                exitDialog.classList.remove('scale-95', 'opacity-0');
+                exitDialog.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        }
+
+        function closeExitModal(appliedDiscount = false) {
+            exitBackdrop.classList.add('opacity-0');
+            exitDialog.classList.remove('scale-100', 'opacity-100');
+            exitDialog.classList.add('scale-95', 'opacity-0');
+
+            setTimeout(() => {
+                exitModal.classList.add('invisible');
+            }, 300);
+
+            // Store state in localstorage to not bug visitors
+            localStorage.setItem('dismissedExitIntent', 'true');
+
+            if (appliedDiscount) {
+                // Pre-fill or add a notice/simulate checkout discount code application
+                alert("20% Coupon Code 'UPISAFE20' applied! Proceeding to order.");
+            }
+        }
+
+
+        // --- 5. FREE CHAPTER PREVIEW MODAL ---
+        const previewModal = document.getElementById('preview-modal');
+        const previewBackdrop = document.getElementById('preview-modal-backdrop');
+        const previewPanel = document.getElementById('preview-modal-panel');
+
+        function openPreviewModal() {
+            previewModal.classList.remove('invisible');
+            document.body.classList.add('overflow-hidden'); // Lock background scroll
+
+            setTimeout(() => {
+                previewBackdrop.classList.remove('opacity-0');
+                previewPanel.classList.remove('translate-x-full');
+            }, 10);
+        }
+
+        function closePreviewModal() {
+            previewBackdrop.classList.add('opacity-0');
+            previewPanel.classList.add('translate-x-full');
+            document.body.classList.remove('overflow-hidden');
+
+            setTimeout(() => {
+                previewModal.classList.add('invisible');
+            }, 300);
+        }
+
+
+        // --- 6. SIMULATE PURCHASE ---
+        function simulatePurchase() {
+            alert("Redirecting to secure merchant payment gateway... Secure Checkout Simulated Successfully!");
+        }
+    </script>
+</body>
+</html>
