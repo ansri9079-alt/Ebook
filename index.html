@@ -305,9 +305,33 @@
                 <a href="#purchase" class="hidden sm:inline-flex items-center justify-center px-4 py-2 text-xs font-semibold tracking-wide text-white bg-electric-500 hover:bg-electric-600 rounded-lg transition-all shadow-md shadow-electric-500/10 hover:shadow-electric-500/25">
                     Buy Handbook
                 </a>
+
+                <!-- Hamburger Button (Mobile Only) -->
+                <button id="mobile-menu-toggle" aria-label="Open mobile menu" class="md:hidden p-2.5 rounded-lg border border-slate-200 dark:border-white/10 hover:bg-slate-100 dark:hover:bg-white/5 transition-colors text-slate-600 dark:text-slate-400">
+                    <svg id="hamburger-icon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                    <svg id="close-icon" class="hidden w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
             </div>
         </div>
     </header>
+
+    <!-- Mobile Menu Drawer -->
+    <div id="mobile-menu" class="fixed inset-0 z-30 md:hidden bg-slate-50/98 dark:bg-navy-950/98 backdrop-blur-lg flex flex-col pt-28 pb-8 px-6 transition-all duration-300 ease-in-out transform -translate-y-full opacity-0 pointer-events-none">
+        <nav class="flex flex-col space-y-4 text-base font-semibold">
+            <a href="#why-matters" class="mobile-nav-link hover:text-electric-500 transition-colors py-2.5 border-b border-slate-200 dark:border-white/5 text-slate-800 dark:text-slate-200">Why It Matters</a>
+            <a href="#what-learn" class="mobile-nav-link hover:text-electric-500 transition-colors py-2.5 border-b border-slate-200 dark:border-white/5 text-slate-800 dark:text-slate-200">What You'll Learn</a>
+            <a href="#showcase" class="mobile-nav-link hover:text-electric-500 transition-colors py-2.5 border-b border-slate-200 dark:border-white/5 text-slate-800 dark:text-slate-200">Inside the Book</a>
+            <a href="#testimonials" class="mobile-nav-link hover:text-electric-500 transition-colors py-2.5 border-b border-slate-200 dark:border-white/5 text-slate-800 dark:text-slate-200">Reviews</a>
+            <a href="#faq" class="mobile-nav-link hover:text-electric-500 transition-colors py-2.5 pb-4 text-slate-800 dark:text-slate-200">FAQ</a>
+            <a href="#purchase" class="mobile-nav-link flex items-center justify-center w-full py-3.5 text-sm font-bold text-white bg-electric-500 hover:bg-electric-600 rounded-xl transition-all shadow-lg shadow-electric-500/20">
+                Buy Handbook
+            </a>
+        </nav>
+    </div>
 
     <!-- Hero Section -->
     <section class="relative min-h-screen pt-36 pb-16 flex items-center overflow-hidden">
@@ -385,7 +409,7 @@
     </section>
 
     <!-- Section 2 — Why This Handbook Matters -->
-    <section id="why-matters" class="relative py-24 border-t border-slate-200/60 dark:border-white/5 bg-slate-100/30 dark:bg-navy-950/40 scroll-mt-24">
+    <section id="why-matters" class="relative py-16 md:py-24 border-t border-slate-200/60 dark:border-white/5 bg-slate-100/30 dark:bg-navy-950/40 scroll-mt-24">
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             
             <!-- Section Header -->
@@ -404,7 +428,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 
                 <!-- Card 1: Fake payment screenshots -->
-                <div class="group glass p-8 rounded-2xl flex flex-col justify-between hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                <div class="group glass p-6 sm:p-8 rounded-2xl flex flex-col justify-between hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
                     <div class="absolute -top-12 -right-12 w-24 h-24 bg-red-500/10 rounded-full blur-2xl group-hover:bg-red-500/20 transition-all"></div>
                     <div>
                         <!-- Phone / Screenshot Icon -->
@@ -421,7 +445,7 @@
                 </div>
 
                 <!-- Card 2: QR code traps -->
-                <div class="group glass p-8 rounded-2xl flex flex-col justify-between hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                <div class="group glass p-6 sm:p-8 rounded-2xl flex flex-col justify-between hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
                     <div class="absolute -top-12 -right-12 w-24 h-24 bg-amber-500/10 rounded-full blur-2xl group-hover:bg-amber-500/20 transition-all"></div>
                     <div>
                         <!-- QR Code Icon -->
@@ -438,7 +462,7 @@
                 </div>
 
                 <!-- Card 3: Remote access fraud -->
-                <div class="group glass p-8 rounded-2xl flex flex-col justify-between hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                <div class="group glass p-6 sm:p-8 rounded-2xl flex flex-col justify-between hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
                     <div class="absolute -top-12 -right-12 w-24 h-24 bg-electric-500/10 rounded-full blur-2xl group-hover:bg-electric-500/20 transition-all"></div>
                     <div>
                         <!-- Remote Screen Icon -->
@@ -455,7 +479,7 @@
                 </div>
 
                 <!-- Card 4: Social engineering tactics -->
-                <div class="group glass p-8 rounded-2xl flex flex-col justify-between hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
+                <div class="group glass p-6 sm:p-8 rounded-2xl flex flex-col justify-between hover:scale-[1.02] hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
                     <div class="absolute -top-12 -right-12 w-24 h-24 bg-emerald-500/10 rounded-full blur-2xl group-hover:bg-emerald-500/20 transition-all"></div>
                     <div>
                         <!-- Brain / Human Interaction Icon -->
@@ -477,7 +501,7 @@
     </section>
 
     <!-- Section 3 — What You'll Learn -->
-    <section id="what-learn" class="relative py-24 scroll-mt-24">
+    <section id="what-learn" class="relative py-16 md:py-24 scroll-mt-24">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-electric-500/5 rounded-full blur-[120px] pointer-events-none"></div>
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             
@@ -497,7 +521,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 
                 <!-- Card 1: Understanding modern UPI scams -->
-                <div class="glass p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-electric-500/30 transition-all duration-300">
+                <div class="glass p-6 sm:p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-electric-500/30 transition-all duration-300">
                     <div class="flex items-start space-x-4">
                         <div class="text-3xl">📘</div>
                         <div class="space-y-2">
@@ -510,7 +534,7 @@
                 </div>
 
                 <!-- Card 2: Protecting your accounts -->
-                <div class="glass p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-electric-500/30 transition-all duration-300">
+                <div class="glass p-6 sm:p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-electric-500/30 transition-all duration-300">
                     <div class="flex items-start space-x-4">
                         <div class="text-3xl">🛡️</div>
                         <div class="space-y-2">
@@ -523,7 +547,7 @@
                 </div>
 
                 <!-- Card 3: Secure payment habits -->
-                <div class="glass p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-electric-500/30 transition-all duration-300">
+                <div class="glass p-6 sm:p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-electric-500/30 transition-all duration-300">
                     <div class="flex items-start space-x-4">
                         <div class="text-3xl">📱</div>
                         <div class="space-y-2">
@@ -536,7 +560,7 @@
                 </div>
 
                 <!-- Card 4: Recognizing red flags -->
-                <div class="glass p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-electric-500/30 transition-all duration-300">
+                <div class="glass p-6 sm:p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-electric-500/30 transition-all duration-300">
                     <div class="flex items-start space-x-4">
                         <div class="text-3xl">⚠️</div>
                         <div class="space-y-2">
@@ -549,7 +573,7 @@
                 </div>
 
                 <!-- Card 5: Privacy best practices -->
-                <div class="glass p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-electric-500/30 transition-all duration-300">
+                <div class="glass p-6 sm:p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-electric-500/30 transition-all duration-300">
                     <div class="flex items-start space-x-4">
                         <div class="text-3xl">🔐</div>
                         <div class="space-y-2">
@@ -562,7 +586,7 @@
                 </div>
 
                 <!-- Card 6: Recovery steps after fraud -->
-                <div class="glass p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-electric-500/30 transition-all duration-300">
+                <div class="glass p-6 sm:p-8 rounded-2xl border border-white/5 relative overflow-hidden group hover:border-electric-500/30 transition-all duration-300">
                     <div class="flex items-start space-x-4">
                         <div class="text-3xl">🚨</div>
                         <div class="space-y-2">
@@ -580,7 +604,7 @@
     </section>
 
     <!-- Section 4 — Ebook Showcase -->
-    <section id="showcase" class="relative py-24 border-t border-slate-200/60 dark:border-white/5 bg-slate-100/30 dark:bg-navy-950/40 scroll-mt-24">
+    <section id="showcase" class="relative py-16 md:py-24 border-t border-slate-200/60 dark:border-white/5 bg-slate-100/30 dark:bg-navy-950/40 scroll-mt-24">
         <div class="max-w-7xl mx-auto px-6 relative z-10 flex flex-col items-center">
             
             <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
@@ -669,7 +693,7 @@
     </section>
 
     <!-- Section 5 — Social Proof -->
-    <section id="testimonials" class="relative py-24 scroll-mt-24">
+    <section id="testimonials" class="relative py-16 md:py-24 scroll-mt-24">
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             
             <!-- Section Header -->
@@ -685,7 +709,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 
                 <!-- Review 1 -->
-                <div class="glass p-8 rounded-2xl flex flex-col justify-between hover:scale-[1.01] transition-transform duration-300 relative border border-white/5">
+                <div class="glass p-6 sm:p-8 rounded-2xl flex flex-col justify-between hover:scale-[1.01] transition-transform duration-300 relative border border-white/5">
                     <!-- Rating Stars -->
                     <div class="space-y-4">
                         <div class="flex text-amber-400 space-x-1">
@@ -708,7 +732,7 @@
                 </div>
 
                 <!-- Review 2 -->
-                <div class="glass p-8 rounded-2xl flex flex-col justify-between hover:scale-[1.01] transition-transform duration-300 relative border border-white/5">
+                <div class="glass p-6 sm:p-8 rounded-2xl flex flex-col justify-between hover:scale-[1.01] transition-transform duration-300 relative border border-white/5">
                     <!-- Rating Stars -->
                     <div class="space-y-4">
                         <div class="flex text-amber-400 space-x-1">
@@ -731,7 +755,7 @@
                 </div>
 
                 <!-- Review 3 -->
-                <div class="glass p-8 rounded-2xl flex flex-col justify-between hover:scale-[1.01] transition-transform duration-300 relative border border-white/5">
+                <div class="glass p-6 sm:p-8 rounded-2xl flex flex-col justify-between hover:scale-[1.01] transition-transform duration-300 relative border border-white/5">
                     <!-- Rating Stars -->
                     <div class="space-y-4">
                         <div class="flex text-amber-400 space-x-1">
@@ -759,12 +783,12 @@
     </section>
 
     <!-- Section 6 — Why Buy Now -->
-    <section id="purchase" class="relative py-24 border-t border-slate-200/60 dark:border-white/5 bg-gradient-to-b from-navy-950 to-slate-900/50 scroll-mt-24">
+    <section id="purchase" class="relative py-16 md:py-24 border-t border-slate-200/60 dark:border-white/5 bg-gradient-to-b from-navy-950 to-slate-900/50 scroll-mt-24">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-electric-500/5 rounded-full blur-[140px] pointer-events-none"></div>
         
         <div class="max-w-4xl mx-auto px-6 relative z-10">
             <!-- Glass Purchase Container -->
-            <div class="glass p-8 md:p-12 rounded-3xl border border-white/10 relative overflow-hidden flex flex-col md:flex-row gap-8 items-center">
+            <div class="glass p-6 sm:p-10 md:p-12 rounded-3xl border border-white/10 relative overflow-hidden flex flex-col md:flex-row gap-8 items-center">
                 
                 <!-- Tag background glowing -->
                 <div class="absolute -right-24 -bottom-24 w-80 h-80 bg-emerald-500/10 rounded-full blur-[80px] pointer-events-none"></div>
@@ -805,7 +829,7 @@
                 </div>
 
                 <!-- Checkout Card -->
-                <div class="md:w-2/5 w-full bg-white dark:bg-slate-900/60 p-8 rounded-2xl border border-slate-200/80 dark:border-white/5 flex flex-col items-center justify-between text-center relative z-10 shadow-xl">
+                <div class="md:w-2/5 w-full bg-white dark:bg-slate-900/60 p-6 sm:p-8 rounded-2xl border border-slate-200/80 dark:border-white/5 flex flex-col items-center justify-between text-center relative z-10 shadow-xl">
                     <span class="text-xs uppercase font-bold tracking-widest text-slate-400">Digital Edition</span>
                     
                     <div class="my-6">
@@ -834,7 +858,7 @@
     </section>
 
     <!-- Section 7 — FAQ -->
-    <section id="faq" class="relative py-24 scroll-mt-24">
+    <section id="faq" class="relative py-16 md:py-24 scroll-mt-24">
         <div class="max-w-4xl mx-auto px-6 relative z-10">
             
             <!-- Section Header -->
@@ -923,8 +947,8 @@
     </section>
 
     <!-- Footer -->
-    <footer class="relative bg-slate-950 border-t border-white/5 py-12 text-slate-500 text-sm">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+    <footer class="relative bg-slate-950 border-t border-white/5 pt-16 pb-32 md:py-16 text-slate-500 text-sm">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
             
             <div class="space-y-4">
                 <a href="#" class="flex items-center space-x-2">
@@ -1292,6 +1316,45 @@
         function simulatePurchase() {
             alert("Redirecting to secure merchant payment gateway... Secure Checkout Simulated Successfully!");
         }
+
+        // --- 7. MOBILE MENU CONTROLLER ---
+        const mobileMenuToggleBtn = document.getElementById('mobile-menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const hamburgerIcon = document.getElementById('hamburger-icon');
+        const closeIcon = document.getElementById('close-icon');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        function toggleMobileMenu() {
+            const isOpen = mobileMenu.classList.contains('translate-y-0');
+            if (isOpen) {
+                // Close
+                mobileMenu.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
+                mobileMenu.classList.add('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                hamburgerIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            } else {
+                // Open
+                mobileMenu.classList.remove('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                mobileMenu.classList.add('translate-y-0', 'opacity-100', 'pointer-events-auto');
+                hamburgerIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+                document.body.classList.add('overflow-hidden');
+            }
+        }
+
+        mobileMenuToggleBtn.addEventListener('click', toggleMobileMenu);
+
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                // Close menu when link is clicked
+                mobileMenu.classList.remove('translate-y-0', 'opacity-100', 'pointer-events-auto');
+                mobileMenu.classList.add('-translate-y-full', 'opacity-0', 'pointer-events-none');
+                hamburgerIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+                document.body.classList.remove('overflow-hidden');
+            });
+        });
     </script>
 </body>
 </html>
