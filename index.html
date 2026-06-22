@@ -222,7 +222,10 @@
         /* ── Full-Cover Book Display ── */
         .cover-display-wrap {
             perspective: 1200px;
-            padding: 20px 40px 50px 20px;
+            padding: 10px 20px 25px 10px;
+        }
+        @media (min-width: 640px) {
+            .cover-display-wrap { padding: 20px 40px 50px 20px; }
         }
         .cover-display {
             position: relative;
@@ -240,10 +243,13 @@
         }
         .cover-display-img {
             display: block;
-            width: 240px;
+            width: 180px;
             height: auto;
             border-radius: 4px 8px 8px 4px;
             object-fit: cover;
+        }
+        @media (min-width: 400px) {
+            .cover-display-img { width: 220px; }
         }
         @media (min-width: 640px) {
             .cover-display-img { width: 280px; }
@@ -263,7 +269,7 @@
         }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900 dark:bg-navy-950 dark:text-slate-100 transition-colors duration-300 security-grid">
+<body class="bg-slate-50 text-slate-900 dark:bg-navy-950 dark:text-slate-100 transition-colors duration-300 security-grid overflow-x-hidden break-words">
 
     <!-- Header & Navigation -->
     <header class="fixed top-0 left-0 w-full z-40 transition-all duration-300 glass border-b border-white/5 py-4">
@@ -365,18 +371,18 @@
                 </p>
 
                 <!-- Trust Indicators Grid -->
-                <div class="grid grid-cols-3 gap-2 md:gap-4 py-2 border-y border-slate-200/60 dark:border-white/5 max-w-xl text-sm animate-fadeInUp" style="animation-delay: 0.3s;">
+                <div class="flex flex-col sm:flex-row gap-3 sm:gap-6 py-4 border-y border-slate-200/60 dark:border-white/5 max-w-xl text-sm animate-fadeInUp" style="animation-delay: 0.3s;">
                     <div class="flex items-center space-x-2 font-medium">
                         <span class="text-emerald-500 font-bold text-lg">✓</span>
-                        <span class="text-slate-700 dark:text-slate-300 text-xs md:text-sm">Digital Download</span>
+                        <span class="text-slate-700 dark:text-slate-300 text-sm">Digital Download</span>
                     </div>
                     <div class="flex items-center space-x-2 font-medium">
                         <span class="text-emerald-500 font-bold text-lg">✓</span>
-                        <span class="text-slate-700 dark:text-slate-300 text-xs md:text-sm">Instant Access</span>
+                        <span class="text-slate-700 dark:text-slate-300 text-sm">Instant Access</span>
                     </div>
                     <div class="flex items-center space-x-2 font-medium">
                         <span class="text-emerald-500 font-bold text-lg">✓</span>
-                        <span class="text-slate-700 dark:text-slate-300 text-xs md:text-sm">Easy to Understand</span>
+                        <span class="text-slate-700 dark:text-slate-300 text-sm">Easy to Understand</span>
                     </div>
                 </div>
 
@@ -948,7 +954,7 @@
 
     <!-- Footer -->
     <footer class="relative bg-slate-950 border-t border-white/5 pt-16 pb-32 md:py-16 text-slate-500 text-sm">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
             
             <div class="space-y-4">
                 <a href="#" class="flex items-center space-x-2">
@@ -1007,7 +1013,7 @@
     <!-- Interactive Sticky CTA Button (bottom desktop right, mobile full-width bar) -->
     <div id="sticky-cta" class="fixed bottom-0 left-0 w-full md:bottom-6 md:right-6 md:left-auto md:w-auto z-40 transform translate-y-full opacity-0 transition-all duration-500 ease-out">
         <!-- Desktop Glass Floating Card / Mobile Bar -->
-        <div class="glass px-6 py-4 md:rounded-2xl border-t border-white/10 md:border md:border-white/10 flex items-center justify-between gap-6 md:shadow-2xl shadow-electric-500/10 w-full md:max-w-sm">
+        <div class="glass px-4 md:px-6 py-4 md:rounded-2xl border-t border-white/10 md:border md:border-white/10 flex items-center justify-between gap-3 md:gap-6 md:shadow-2xl shadow-electric-500/10 w-full md:max-w-sm">
             <div class="flex items-center space-x-3">
                 <div class="w-8 h-12 relative flex-shrink-0">
                     <img src="upi_ebook_cover.jpg" alt="Cover thumbnail" class="w-full h-full object-cover rounded shadow">
